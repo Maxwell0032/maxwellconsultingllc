@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Maxwell Consulting LLC | Financial Strategy, Advisory, AI & Trading Research</title>
-
   <meta name="description" content="Maxwell Consulting LLC is the central hub for Maxwell Bookkeeping & Advisory Services, The Book of GREEN, Algorithmic Trading research, and Maxsis AI financial intelligence." />
 
   <style>
     :root {
       --green-dark: #243b2f;
       --green: #445b43;
-      --green-soft: #eef3ed;
+      --green-soft: #e7eee6;
       --cream: #f7f5ef;
-      --text: #1f2933;
-      --muted: #5b6470;
+      --text: #14342b;
+      --muted: #4f5d6b;
       --white: #ffffff;
-      --border: #e4e0d6;
+      --border: #e0dccf;
       --gold: #c6a15b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -33,57 +29,48 @@
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-    }
-
     .nav {
       background: var(--green-dark);
       color: white;
-      padding: 18px 24px;
+      padding: 18px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .nav strong {
-      font-size: 18px;
-      letter-spacing: 0.3px;
-    }
+    .nav strong { font-size: 20px; }
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
+    .nav a {
       color: white;
       text-decoration: none;
-      opacity: 0.9;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-      text-decoration: underline;
+      margin-left: 22px;
+      font-weight: bold;
+      font-size: 15px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #243b2f 0%, #344f3f 55%, #182820 100%);
+      background: linear-gradient(135deg, #243b2f, #365743);
       color: white;
-      padding: 90px 24px 75px;
       text-align: center;
+      padding: 95px 24px 85px;
     }
 
-    .hero-inner {
-      max-width: 1000px;
-      margin: 0 auto;
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.08;
+      margin: 0 auto 24px;
+      max-width: 1050px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 850px;
+      margin: 0 auto 32px;
+      color: rgba(255,255,255,0.9);
     }
 
     .eyebrow {
@@ -95,61 +82,17 @@
       margin-bottom: 18px;
     }
 
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 64px);
-      line-height: 1.08;
-      margin: 0 0 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 850px;
-      margin: 0 auto 30px;
-      opacity: 0.95;
-    }
-
-    .button-row {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 19px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #1b1b1b;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.45);
-      color: white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
     .section {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 65px 24px;
+      padding: 62px 24px;
     }
 
     .section h2 {
-      font-size: 34px;
-      color: var(--green-dark);
-      margin: 0 0 14px;
       text-align: center;
+      font-size: 36px;
+      margin: 0 0 14px;
+      color: var(--text);
     }
 
     .section-lead {
@@ -160,14 +103,66 @@
       color: var(--muted);
     }
 
-    .grid {
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-secondary {
+      background: var(--green);
+      color: white;
+    }
+
+    .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 22px;
     }
 
+    .stat {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 24px;
+    }
+
     .card {
-      background: var(--white);
+      background: white;
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 28px;
@@ -175,18 +170,16 @@
     }
 
     .card h3 {
-      color: var(--green-dark);
+      margin-top: 0;
       font-size: 23px;
-      margin: 0 0 10px;
+      color: var(--green-dark);
     }
 
-    .card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
+    .card p { color: var(--muted); }
 
     .card a {
       display: inline-block;
+      margin-top: 10px;
       background: var(--green);
       color: white;
       text-decoration: none;
@@ -200,7 +193,7 @@
       display: inline-block;
       background: var(--green-soft);
       color: var(--green-dark);
-      padding: 5px 9px;
+      padding: 5px 10px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: bold;
@@ -211,7 +204,7 @@
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 32px;
-      align-items: center;
+      align-items: start;
     }
 
     .panel {
@@ -222,43 +215,9 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.06);
     }
 
-    .panel h2 {
-      text-align: left;
-    }
+    .panel h2 { text-align: left; }
 
-    .list {
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .list li {
-      margin-bottom: 10px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .stat {
-      background: var(--green-soft);
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      color: var(--green-dark);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .list li { margin-bottom: 10px; color: var(--muted); }
 
     .dark-section {
       background: var(--green-dark);
@@ -274,11 +233,6 @@
     .dark-section h2 {
       text-align: center;
       font-size: 34px;
-      margin-top: 0;
-    }
-
-    .dark-section .section-lead {
-      color: rgba(255,255,255,0.82);
     }
 
     .dark-card {
@@ -288,31 +242,22 @@
       padding: 25px;
     }
 
-    .dark-card h3 {
-      color: var(--gold);
-      margin-top: 0;
-    }
+    .dark-card h3 { color: var(--gold); }
 
-    .dark-card p {
-      color: rgba(255,255,255,0.84);
-    }
+    .dark-card p { color: rgba(255,255,255,0.85); }
 
     .cta {
       text-align: center;
       background: white;
       border: 1px solid var(--border);
       border-radius: 24px;
-      padding: 45px 28px;
+      padding: 48px 28px;
       box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-    }
-
-    .cta h2 {
-      margin-bottom: 12px;
     }
 
     .cta p {
       max-width: 760px;
-      margin: 0 auto 24px;
+      margin: 0 auto 26px;
       color: var(--muted);
       font-size: 18px;
     }
@@ -320,7 +265,7 @@
     .footer {
       background: #17241d;
       color: rgba(255,255,255,0.78);
-      padding: 35px 24px;
+      padding: 30px 24px;
       text-align: center;
       font-size: 14px;
     }
@@ -332,16 +277,17 @@
 
     @media (max-width: 800px) {
       .nav {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-right: 16px;
       }
 
       .split {
         grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 70px;
       }
     }
   </style>
@@ -351,7 +297,7 @@
 
   <nav class="nav">
     <strong>Maxwell Consulting LLC</strong>
-    <div class="nav-links">
+    <div>
       <a href="#ventures">Ventures</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#about">About</a>
@@ -359,67 +305,57 @@
     </div>
   </nav>
 
+  <header class="hero">
+    <div class="eyebrow">Financial Strategy • Advisory • AI • Trading Research</div>
+    <h1>Financial clarity, intelligent systems, and strategic advisory for businesses, investors, and mission-driven organizations.</h1>
+    <p>
+      Maxwell Consulting LLC brings together CFO-level experience, bookkeeping and advisory services, personal finance education, algorithmic trading research, and AI-powered financial intelligence.
+    </p>
+    <div class="button-row">
+      <a class="btn btn-primary" href="#contact">Work With Maxwell Consulting</a>
+      <a class="btn btn-secondary" href="#ventures">Explore the Platforms</a>
+    </div>
+  </header>
+
   <section class="section">
-  <div class="stats">
-    <div class="stat">
-      <strong>25+</strong>
-      <span>Years Experience</span>
+    <div class="stats">
+      <div class="stat"><strong>25+</strong><span>Years Experience</span></div>
+      <div class="stat"><strong>$24M</strong><span>Budgets Managed</span></div>
+      <div class="stat"><strong>20+</strong><span>Years Trading Experience</span></div>
+      <div class="stat"><strong>MAcc</strong><span>Master of Accountancy</span></div>
     </div>
-    <div class="stat">
-      <strong>$24M</strong>
-      <span>Budgets Managed</span>
-    </div>
-    <div class="stat">
-      <strong>20+</strong>
-      <span>Years Trading Experience</span>
-    </div>
-    <div class="stat">
-      <strong>MAcc</strong>
-      <span>Master of Accountancy</span>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="section" id="ventures">
     <h2>Core Projects & Platforms</h2>
-    <p class="section-lead">
-      Four connected platforms serving businesses, readers, traders, and organizations seeking better financial visibility.
-    </p>
+    <p class="section-lead">Four connected platforms serving businesses, readers, traders, and organizations seeking better financial visibility.</p>
 
     <div class="grid">
       <div class="card">
         <span class="tag">Bookkeeping & Advisory</span>
         <h3>Maxwell Bookkeeping & Advisory Services</h3>
-        <p>
-          Bookkeeping, financial cleanup, reporting, advisory support, and CFO-level insight for businesses and organizations.
-        </p>
+        <p>Bookkeeping, financial cleanup, reporting, advisory support, and CFO-level insight for businesses and organizations.</p>
         <a href="https://MaxwellBookkeeping.com">Visit MaxwellBookkeeping.com</a>
       </div>
 
       <div class="card">
         <span class="tag">Personal Finance Education</span>
         <h3>The Book of GREEN</h3>
-        <p>
-          A Personal CFO framework designed to help readers understand money systems, financial decision-making, and long-term stability.
-        </p>
+        <p>A Personal CFO framework designed to help readers understand money systems, financial decision-making, and long-term stability.</p>
         <a href="https://TheBookofGREEN.com">Visit TheBookofGREEN.com</a>
       </div>
 
       <div class="card">
         <span class="tag">Trading Research</span>
         <h3>Algorithmic Trading</h3>
-        <p>
-          Quantitative research, market structure analysis, automated trading concepts, backtesting, and trading system development.
-        </p>
+        <p>Quantitative research, market structure analysis, automated trading concepts, backtesting, and trading system development.</p>
         <a href="https://ExcelWithMaxwell.com">Visit ExcelWithMaxwell.com</a>
       </div>
 
       <div class="card">
         <span class="tag">AI Financial Intelligence</span>
         <h3>Maxsis AI</h3>
-        <p>
-          AI-powered financial intelligence for liquidity monitoring, anomaly detection, risk visibility, and CFO-style reporting.
-        </p>
+        <p>AI-powered financial intelligence for liquidity monitoring, anomaly detection, risk visibility, and CFO-style reporting.</p>
         <a href="https://MaxsisAI.com">Visit MaxsisAI.com</a>
       </div>
     </div>
@@ -429,11 +365,6 @@
     <div class="split">
       <div class="panel">
         <h2>What Maxwell Consulting Brings Together</h2>
-        <p>
-          Maxwell Consulting LLC combines traditional accounting discipline with modern analytical systems,
-          helping clients move from reactive reporting to forward-looking financial intelligence.
-        </p>
-
         <ul class="list">
           <li>Bookkeeping, cleanup, reconciliation, and reporting support</li>
           <li>Fractional CFO-style financial analysis and advisory</li>
@@ -446,140 +377,66 @@
       </div>
 
       <div class="panel">
-        <h2>Positioning</h2>
+        <h2>Government & Institutional Support</h2>
         <p>
-          The goal is simple: help people and organizations see their financial reality clearly,
-          identify risks earlier, and make better decisions with better systems.
+          Maxwell Consulting LLC supports agencies, nonprofits, and organizations requiring high-integrity financial analysis, reporting clarity, and forensic-level insight.
         </p>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>25+</strong>
-            <span>Years CFO-level experience</span>
-          </div>
-          <div class="stat">
-            <strong>$24M</strong>
-            <span>Budgets managed</span>
-          </div>
-          <div class="stat">
-            <strong>4</strong>
-            <span>Connected platforms</span>
-          </div>
-          <div class="stat">
-            <strong>AI + Finance</strong>
-            <span>Modern financial systems</span>
-          </div>
-        </div>
+        <ul class="list">
+          <li>Financial reporting and FP&A</li>
+          <li>Forensic accounting and audit support</li>
+          <li>Data automation and financial dashboards</li>
+          <li>Grant, nonprofit, and public-sector financial visibility</li>
+        </ul>
       </div>
     </div>
   </section>
 
-<section class="section">
-  <h2>Government & Institutional Support</h2>
-  <p class="section-lead">
-    Maxwell Consulting LLC supports agencies and organizations requiring high-integrity financial analysis,
-    reporting clarity, and forensic-level insight.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Financial Reporting & FP&A</h3>
-      <p>Budget analysis, forecasting, reporting frameworks, and financial visibility.</p>
-    </div>
-
-    <div class="card">
-      <h3>Forensic Accounting</h3>
-      <p>Transaction review, anomaly detection, and audit support for high-stakes environments.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data & Automation</h3>
-      <p>Python and Excel-based reporting systems to improve accuracy and efficiency.</p>
-    </div>
-  </div>
-</section>
-  
   <section class="dark-section" id="about">
     <div class="dark-inner">
       <h2>Built at the Intersection of Finance, Systems, and Strategy</h2>
-      <p class="section-lead">
-        Maxwell Consulting LLC serves as the operating umbrella for advisory services, financial education,
-        trading research, and AI-powered financial intelligence tools.
+      <p class="section-lead" style="color:rgba(255,255,255,0.82);">
+        Maxwell Consulting LLC serves as the operating umbrella for advisory services, financial education, trading research, and AI-powered financial intelligence tools.
       </p>
 
       <div class="grid">
         <div class="dark-card">
           <h3>For Businesses</h3>
-          <p>
-            Cleaner books, stronger reporting, better cash visibility, and advisory support designed to help owners understand what the numbers are really saying.
-          </p>
+          <p>Cleaner books, stronger reporting, better cash visibility, and advisory support designed to help owners understand what the numbers are really saying.</p>
         </div>
 
         <div class="dark-card">
           <h3>For Individuals</h3>
-          <p>
-            Practical financial education through The Book of GREEN, helping readers build personal money systems instead of relying on scattered advice.
-          </p>
+          <p>Practical financial education through The Book of GREEN, helping readers build personal money systems instead of relying on scattered advice.</p>
         </div>
 
         <div class="dark-card">
           <h3>For Traders & Researchers</h3>
-          <p>
-            Algorithmic trading research focused on process, systems, backtesting, risk controls, and market behavior.
-          </p>
+          <p>Algorithmic trading research focused on process, systems, backtesting, risk controls, and market behavior.</p>
         </div>
 
         <div class="dark-card">
           <h3>For Mission-Driven Organizations</h3>
-          <p>
-            AI financial intelligence concepts designed to support nonprofits, SMBs, and public-interest organizations that need CFO-level insight without enterprise overhead.
-          </p>
+          <p>AI financial intelligence concepts designed to support nonprofits, SMBs, and public-interest organizations needing CFO-level insight.</p>
         </div>
       </div>
     </div>
   </section>
 
-<section class="section">
-  <div class="cta">
-    <h2>Work Directly With Maxwell Consulting</h2>
-    <p>
-      If you're a business owner, nonprofit leader, or organization needing financial clarity,
-      reporting cleanup, or strategic insight — this is where to start.
-    </p>
-
-    <div class="button-row">
-      <a class="btn btn-primary" href="mailto:Maxwell@MaxwellBookkeeping.com?subject=Consulting Inquiry">
-        Request a Consultation
-      </a>
-      <a class="btn" style="background:#445b43;color:white;" href="https://MaxwellBookkeeping.com">
-        View Bookkeeping & Advisory Services
-      </a>
-    </div>
-
-    <p style="font-size:14px; margin-top:18px;">
-      Typical engagements include cleanup projects, reporting rebuilds, and ongoing advisory support.
-    </p>
-  </div>
-</section>
-  
   <section class="section" id="contact">
     <div class="cta">
       <h2>Looking for financial clarity, advisory support, or a strategic partner?</h2>
       <p>
-        Maxwell Consulting LLC brings together accounting experience, financial strategy,
-        automation, and AI-assisted analysis to help businesses and organizations make better decisions.
+        Maxwell Consulting LLC brings together accounting experience, financial strategy, automation, and AI-assisted analysis to help businesses and organizations make better decisions.
       </p>
-
       <div class="button-row">
         <a class="btn btn-primary" href="mailto:Maxwell@MaxwellBookkeeping.com">Email Maxwell Consulting</a>
-        <a class="btn" style="background:#445b43;color:white;" href="https://MaxwellBookkeeping.com">Start with Bookkeeping & Advisory</a>
+        <a class="btn btn-secondary" href="https://MaxwellBookkeeping.com">Start with Bookkeeping & Advisory</a>
       </div>
-
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>
-      © 2026 Maxwell Consulting LLC. All rights reserved.
-    </p>
+    <p>© 2026 Maxwell Consulting LLC. All rights reserved.</p>
     <p>
       <a href="https://MaxwellBookkeeping.com">Maxwell Bookkeeping</a> |
       <a href="https://TheBookofGREEN.com">The Book of GREEN</a> |
